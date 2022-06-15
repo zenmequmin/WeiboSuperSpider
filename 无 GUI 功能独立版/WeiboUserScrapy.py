@@ -24,7 +24,7 @@ from lxml import etree
 import json
 
 User_Agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
-Cookie = '换成你自己的 cookie, 可以参考：https://www.bilibili.com/video/BV1934y127ZM'
+Cookie = '_T_WM=95827117473; WEIBOCN_FROM=1110006030; SUB=_2A25PraBbDeRhGeVH6lMY8irPzzWIHXVtUcATrDV6PUJbkdCOLVPwkW1NT2RG13UcMkzeIiNVGkAk0FQRgCeDxJ6N; SCF=Ajb29l5i8vaDXsERIoyGhILxSra7DHIdUuB8aqzZiolly2VH9k2-eTY8cnx9n43QRyE4Ez2lGBdNFH0FmydvsOI.; SSOLoginState=1655296011; MLOGIN=1; M_WEIBOCN_PARAMS=lfid=2304133911924349_-_WEIBO_SECOND_PROFILE_WEIBO&luicode=20000174&uicode=20000174; XSRF-TOKEN=887d9b; mweibo_short_token=c080172be4'
 
 class WeiboUserScrapy():
 
@@ -38,9 +38,9 @@ class WeiboUserScrapy():
         if filter != 0 and filter != 1:
             sys.exit('filter值应为0或1,请重新输入')
 
-        self.user_id = str(user_id)  # 用户id,即需要我们输入的数字,如昵称为"Dear-迪丽热巴"的id为1669879400
-        self.filter = filter  # 取值范围为0、1,程序默认值为0,代表要爬取用户的全部微博,1代表只爬取用户的原创微博
-        self.nickname = ''  # 用户昵称,如“Dear-迪丽热巴”
+        self.user_id = str(3911924349)  # 
+        self.filter = 1  # 取值范围为0、1,程序默认值为0,代表要爬取用户的全部微博,1代表只爬取用户的原创微博
+        self.nickname = '极米'  # 用户昵称,如“Dear-迪丽热巴”
         self.weibo_num = 0  # 用户全部微博数
         self.got_num = 0  # 爬取到的微博数
         self.following = 0  # 用户关注数
